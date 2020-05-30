@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUPER SHOP </title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- Font Awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+  <div class="container w-auto text-center bg-dark">
+    <h1 class=" py-2 text-info"> <i class="fas fa-cart-arrow-down"></i> Super Shop</h1>
+    <h2 class="text-info py-3">By Siblu Anis</h2>
+  </div>
+
+  <div class="container w-auto d-flex justify-content-center mb-3 py-3 bg-dark">
+    <form class="w-50">
+      <input type="text" id="userid" class="form-control" readonly placeholder="ID" autocomplete="off">
+      <input type="text" id="proname" class="form-control" placeholder="Product Name" autocomplete="off">
+      <div class="row">
+        <div class="col">
+          <input type="text" id="seller" class="form-control m-0" placeholder="Seller" autocomplete="off">
+        </div>
+        <div class="col">
+          <input type="text" id="price" class="form-control m-0" placeholder="Price" autocomplete="off">
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- CREATE, UPDATE, READ AND DELETE BUTTON -->
+
+  <div class="container d-block w-auto bg-dark justify-content-center d-flex">
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-success" id="btn-create">Create</button>
+        <button class="btn btn-primary" id="btn-read">Read</button>
+        <button class="btn btn-warning" id="btn-update">Update</button>
+        <button class="btn btn-danger" id="btn-delete">Delete All</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container d-flex justify-content-center ">
+    <table class="table table-bordered table-dark ">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Seller</th>
+          <th scope="col">Price</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+
+        <!-- <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td><i class="fas fa-edit btnedit"></i></td>
+          <td><i class="fas fa-trash btndelete"></i></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td><i class="fas fa-edit btnedit"></i></td>
+          <td><i class="fas fa-trash btndelete"></i></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+          <td><i class="fas fa-edit btnedit"></i></td>
+          <td><i class="fas fa-trash btndelete"></i></td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+  <div class="container text-center">
+    <div id="notfound"></div>
+  </div>
+
+
+  <div class="w-100 btn btn-success insertmsg">Data Inserted Successfully...!</div>
+  <div class="w-100 btn btn-warning updatemsg">Data Updated...! Refresh Database to See Results</div>
+  <div class="w-100 btn btn-danger deletemsg">Data Deleted...!</div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <!-- DEXIE API -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.0.1/dexie.min.js"
+    integrity="sha256-CbTA/LMThZ+vQ/Ie9jGYhoTXLWzBZz3PmYc7JZETJwE=" crossorigin="anonymous"></script>
+
+  <!-- CUSTOM JAVASCRIPT main.js -->
+
+  <script src="../JS/main.js" type="module"></script>
+</body>
+
+</html>
